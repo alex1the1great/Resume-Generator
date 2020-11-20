@@ -22,5 +22,17 @@ document.add_heading('Career Profile')
 user_bio = input('Describe yourself: ')
 document.add_paragraph(user_bio)
 
+# skill
+document.add_heading('Skills')
+
+while True:
+    has_skill = input('Do you have skill: (y/n) ')
+
+    if has_skill.lower() == 'y':
+        skill_name = input('Enter your skill name: ')
+        document.add_paragraph(skill_name, 'List Bullet')
+    else:
+        break
+
 
 document.save('cv.docx')
