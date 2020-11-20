@@ -22,7 +22,7 @@ document.add_heading('Career Profile')
 user_bio = input('Describe yourself: ')
 document.add_paragraph(user_bio)
 
-# skill
+# section: skills
 document.add_heading('Skills')
 
 while True:
@@ -33,6 +33,5 @@ while True:
         document.add_paragraph(skill_name, 'List Bullet')
     else:
         break
-
 
 document.save('cv.docx')
