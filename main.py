@@ -57,4 +57,22 @@ if has_experience == 'y':
         else:
             break
 
+# section: education
+document.add_heading('Education')
+
+while True:
+    has_education = input('Do you have education: (y/n) ')
+
+    education_paragraph = document.add_paragraph()
+
+    if has_education == 'y':
+        education_name = input('Enter education institute name: ')
+        from_date = input('From Date (year): ')
+        to_date = input('To Date (year): ')
+
+        education_paragraph.add_run(education_name).bold = True
+        education_paragraph.add_run('\n' + from_date + '-' + to_date)
+    else:
+        break
+
 document.save('cv.docx')
