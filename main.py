@@ -53,7 +53,7 @@ if has_experience == 'y':
 
             experience_paragraph.add_run(company_name + ', ').bold = True
             experience_paragraph.add_run(from_date + '-' + to_date + '\n')
-            experience_paragraph.add_run(experience + '\n')
+            experience_paragraph.add_run(experience)
         else:
             break
 
