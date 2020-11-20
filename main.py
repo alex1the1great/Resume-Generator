@@ -34,4 +34,27 @@ while True:
     else:
         break
 
+# section: experience
+has_experience = input('Do you have experience: (y/n) ')
+
+# if experience then add heading.
+if has_experience == 'y':
+    document.add_heading('Experiences')
+    while True:
+        has_more_experience = input('Do you have more experience: (y/n) ')
+
+        experience_paragraph = document.add_paragraph()
+
+        if has_more_experience == 'y':
+            company_name = input('Enter the company name: ')
+            from_date = input('From Date (year): ')
+            to_date = input('To Date (year): ')
+            experience = input(f'Describe your experience at {company_name}: ')
+
+            experience_paragraph.add_run(company_name + ', ').bold = True
+            experience_paragraph.add_run(from_date + '-' + to_date + '\n')
+            experience_paragraph.add_run(experience + '\n')
+        else:
+            break
+
 document.save('cv.docx')
