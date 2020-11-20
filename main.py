@@ -15,7 +15,12 @@ email = input('Enter your email: ')
 user_info.add_run(email + '\n')
 
 phone_number = input('Enter your phone number: ')
-user_info.add_run(phone_number + '\n')
+user_info.add_run(phone_number)
+
+# section: user bio.
+document.add_heading('Career Profile')
+user_bio = input('Describe yourself: ')
+document.add_paragraph(user_bio)
 
 
 document.save('cv.docx')
